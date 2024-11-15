@@ -1,0 +1,22 @@
+/* ĐÃ HOÀN THÀNH */
+.error-container {
+    max-width: 600px;
+    padding: 50px;
+    color: #4a73e8;
+}
+
+.error-code {
+    font-size: 5em;
+    font-weight: bold;
+    color: red;
+}
+
+.message {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.description {
+    font-size: 1em;
+    margin-bottom: 30px;
+}

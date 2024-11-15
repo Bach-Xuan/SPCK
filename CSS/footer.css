@@ -1,0 +1,103 @@
+/* ĐÃ HOÀN THÀNH */
+footer {
+    background-color: #EEEEEE;
+    color: #4a73e8;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-texts a {
+    color: #4a73e8;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-texts a:hover {
+    text-decoration: underline;
+}
+
+.footer-social-icons {
+    margin-top: 10px;
+}
+
+.social-icons svg {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-social-icons a:hover svg {
+    filter: brightness(0) saturate(100%) invert(40%) sepia(100%) saturate(500%) hue-rotate(200deg);
+    transform: scale(1.2);
+}
+
+.footer-logo-container {
+    margin-bottom: 15px;
+    font-family: 'Lato';
+    font-weight: 900;
+    font-size: 23px;
+}
+
+.footer-logo-container a {
+    text-decoration: none;
+}
+
+.footer-logo-container img {
+    width: 50px;
+    height: auto;
+}
+
+.footer-logo-container a:hover img {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}

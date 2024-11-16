@@ -1,14 +1,18 @@
+<!-- SẮP HOÀN THÀNH (THIẾU NAVBAR) -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="CSS/posting.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/forms.css">
   <link rel="stylesheet" href="CSS/footer.css">
   <link rel="stylesheet" href="CSS/brandnav.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>THE DAILY SPEAKER</title>
+  <title>THE DAILY SPEAKER-Posting</title>
+  <!-- FONT CHỮ -->
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" />
+  <!-- BOOTSTRAP -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 </head>
@@ -23,24 +27,76 @@
       </div>
   </nav>
 
+  <!-- NAVBAR: CHƯA HOÀN THÀNH -->
+
+  <!-- CONTENT: ĐÃ HOÀN THÀNH -->
   <div class="form-container">
-    <h1>Create a Post</h1>
+    <h1>POST A ARTICLE</h1>
     <form>
       <div class="form-group">
-        <label for="title">Title</label>
-        <input type="text" id="title" name="title" placeholder="Enter post title" required>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="input-title" placeholder="Title" required>
+          <label>Title</label>
+        </div>
+      </div>
+      <div class="form-text">
+        <p>
+          Must be 1-100 characters long, can contain any character.
+        </p>
       </div>
       <div class="form-group">
-        <label for="content">Content</label>
-        <textarea id="content" name="content" placeholder="Write your post..." required></textarea>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="input-description" placeholder="Description" rows="3" required>
+          <label>Description</label>
+        </div>
+      </div>
+      <div class="form-text">
+        <p>
+          Must be 1-10000 characters long, can contain any character.
+        </p>
       </div>
       <div class="form-group">
-        <label for="image">Upload Image</label>
-        <input type="file" id="image" name="image" accept="image/*" required>
+        <div class="mb-3">
+          <label>Upload your article</label>
+          <input type="file" class="form-control" id="input-article" required>
+        </div>
       </div>
-      <button type="submit" class="submit-button">Post</button>
+      <div class="form-group">
+        <div class="mb-3">
+          <label>Upload your thumbnail</label>
+          <input type="file" class="form-control" id="input-thumbnail" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="mb-3">
+          <label>Upload your podcast (optional)</label>
+          <input type="file" class="form-control" id="input-podcast" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="mb-3">
+          <label>Upload author signature (optional)</label>
+          <input type="file" class="form-control" id="input-signature" required>
+        </div>
+      </div>
+      <div class="form-text">
+        <p>
+          You will recieve an email if your article was rejected.
+        </p>
+      </div>
+      <button id="submit-btn" type="reset" onclick="location.href='home.html'" class="submit-button">SUBMIT!</button>
     </form>
   </div>
+  <script>
+    // KÍCH HOẠT NÚT "SUBMIT!" BẰNG CÁCH NHẤN "Enter"
+    var input = document.getElementById("input-thumbnail");
+    input.addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("submit-btn").click();
+      }
+    });
+  </script>
 
   <!-- FOOTER: ĐÃ HOÀN THÀNH -->
   <footer>
@@ -85,9 +141,11 @@
       </div>
   </footer>
 
+  <!-- BOOTSTRAP -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 </body>
 
 </html>
+<!-- END -->

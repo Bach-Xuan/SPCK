@@ -1,4 +1,4 @@
-/* CẦN XEM LẠI */
+/* ĐÃ HOÀN THÀNH */
 .form-container {
     width: 100%;
     max-width: 9999px;
@@ -31,7 +31,9 @@ label {
 
 input[type="text"],
 textarea,
-input[type="file"] {
+input[type="file"],
+input[type="email"],
+input[type="password"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #4a73e8;

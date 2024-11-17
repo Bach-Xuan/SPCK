@@ -1,1 +1,26 @@
-/* CHƯA HOÀN THÀNH */
+/* ĐÃ HOÀN THÀNH */
+.search-box {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+}
+.btn-search {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+}
+.navbar-home {
+    padding: 10px;
+    color: white;
+}
+.navbar-home a {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+}
+.form-item {
+    margin-right: 10%;
+}
+.navbar-home {
+    margin-right: 1%;
+}

@@ -41,6 +41,7 @@ input[type="password"] {
     font-size: 1em;
     outline: none;
     color: #4a73e8;
+    min-width: 335px;
 }
 
 textarea {

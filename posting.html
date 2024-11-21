@@ -8,12 +8,15 @@
   <link rel="stylesheet" href="CSS/brandnav.css">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/backtotop.css">
+  <link rel="stylesheet" href="css/notification.css">
   <link rel="stylesheet" href="CSS/footer.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>THE DAILY SPEAKER-Posting</title>
   <!-- FONT CHỮ -->
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" />
+  <!-- reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <!-- BOOTSTRAP -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
@@ -92,6 +95,15 @@
         d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
     </svg></button>
 
+  <!-- NOTIFICATION: ĐÃ HOÀN THÀNH -->
+  <div class="notification">
+    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-bell-fill" viewBox="0 0 16 16">
+        <path
+          d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
+      </svg></a>
+  </div>
+
   <!-- CONTENT: ĐÃ HOÀN THÀNH -->
   <div class="form-container">
     <h1>POST A ARTICLE</h1>
@@ -142,6 +154,11 @@
           <input type="file" class="form-control" id="input-signature" required>
         </div>
       </div>
+
+      <!-- reCAPTCHA -->
+      <div class="g-recaptcha" data-sitekey="6LdnoIQqAAAAAI-ZWUhK-NEBvwTMJE1nkaK1jS92"></div>
+      <br />
+
       <div class="form-text">
         <p>
           You will recieve an email if your article was rejected.

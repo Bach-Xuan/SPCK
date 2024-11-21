@@ -1,0 +1,38 @@
+/* ĐÃ HOÀN THÀNH */
+.content-container {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+}
+
+.article-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 100px 80px;
+}
+
+.article-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.article-sub-title {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+}
+
+.article-content {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.card-body a {
+    font-weight: 900;
+}
+
+.card-body a:hover {
+    background-color: #3a5ec4;
+    transform: scale(1.1);
+}

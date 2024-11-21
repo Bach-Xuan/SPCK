@@ -74,4 +74,5 @@ input[type="file"] {
 
 .submit-button:hover {
     background-color: #3a5ec4;
+    transform: scale(1.1);
 }

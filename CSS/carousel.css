@@ -1,0 +1,26 @@
+/* ĐÃ HOÀN THÀNH */
+.carousel img {
+    padding: 50px 150px;
+    width: 400px;
+    height: 450px !important;
+}
+
+.carousel h5 {
+    color: #4a73e8;
+    font-weight: 700;
+    font-size: 120%;
+}
+
+.carousel p {
+    color: #4a73e8;
+    font-weight: 500;
+    font-size: 120%;
+}
+
+#carousel-btn {
+    font-weight: 900;
+}
+
+#carousel-btn:hover {
+    transform: scale(1.2);
+}

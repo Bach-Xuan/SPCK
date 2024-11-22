@@ -1,26 +1,107 @@
 /* ĐÃ HOÀN THÀNH */
+nav {
+    font-weight: 900;
+}
+
 .search-box {
     width: 100%;
-    padding: 10px;
+    padding: 20px !important;
     font-size: 1em;
 }
+
 .btn-search {
     width: 100%;
     padding: 10px;
     font-size: 1em;
+    background-color: transparent;
+    border-color: white;
 }
+
 .navbar-home {
     padding: 10px;
     color: white;
 }
+
 .navbar-home a {
     width: 100%;
     padding: 10px;
     font-size: 1em;
 }
+
 .form-item {
-    margin-right: 10%;
+    margin-right: 4%;
 }
+
 .navbar-home {
     margin-right: 1%;
+    margin-left: 1%;
+}
+
+.navbar-home:hover {
+    transform: scale(1.2);
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.login-btn {
+    align-items: flex-end;
+    margin-right: 2%;
+}
+
+.login-btn button {
+    border-radius: 999px;
+    border-width: 0px;
+    background-color: white;
+    color: #4a73e8;
+    right: 20px;
+}
+
+.login-btn button:hover {
+    transform: scale(1.2);
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
 }

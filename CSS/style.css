@@ -1,0 +1,173 @@
+.content-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* TOP SECTION: ĐÃ HOÀN THÀNH */
+.top-stories {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.top-story {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #4a73e8;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.top-story:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.top-story img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.top-story-content {
+    padding: 15px;
+}
+
+.top-story h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #4a73e8;
+    font-weight: 900;
+}
+
+.top-story p {
+    font-size: 1em;
+    color: #555;
+    font-weight: 500;
+}
+
+/* CATEGORIES SECTION: ĐÃ HOÀN THÀNH */
+.categories {
+    margin-top: 40px;
+    padding-bottom: 80px;
+}
+
+.categories h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #4a73e8;
+    padding-bottom: 5px;
+    font-weight: 700;
+}
+
+.category {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.category-item {
+    flex: 1 1 calc(33.33% - 20px);
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #4a73e8;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.category-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.category-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.category-item h4 {
+    margin-top: 10px;
+    font-size: 1.3em;
+    color: #4a73e8;
+    font-weight: 900;
+}
+
+.category-item p {
+    font-weight: 600;
+}
+
+/* LATEST NEWS SECTION: ĐÃ HOÀN THÀNH */
+.latest-news {
+    margin-top: 40px;
+}
+
+.latest-news h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #4a73e8;
+    padding-bottom: 5px;
+    font-weight: 700;
+}
+
+.latest-news-item {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 20px;
+    padding: 10px;
+    border: 1px solid #4a73e8;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.latest-news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.latest-news-item img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: none;
+}
+
+.latest-news-item h4 {
+    font-size: 1.2em;
+    margin: 0;
+    color: #4a73e8;
+    font-weight: 900;
+}
+
+.latest-news-item p {
+    margin: 5px 0 0;
+    color: #555;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+
+    .top-story,
+    .category-item {
+        flex: 1 1 100%;
+    }
+
+    .latest-news-item {
+        flex-direction: column;
+    }
+
+    .latest-news-item img {
+        width: 100%;
+        height: auto;
+    }
+}

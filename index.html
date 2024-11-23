@@ -1,4 +1,4 @@
-<!-- CHƯA HOÀN THÀNH -->
+<!-- ĐÃ HOÀN THÀNH -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="CSS/brandnav.css">
   <link rel="stylesheet" href="CSS/navbar.css">
   <link rel="stylesheet" href="css/backtotop.css">
-  <link rel="stylesheet" href="css/carousel.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/notification.css">
   <link rel="stylesheet" href="CSS/footer.css" />
   <meta charset="UTF-8" />
@@ -93,65 +93,89 @@
     </div>
   </nav>
 
-  <!-- CONTENT (CAROUSEL): ĐÃ HOÀN THÀNH -->
-  <div class="carousel">
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
+  <!-- CONTENT (TOP SECTION): ĐÃ HOÀN THÀNH -->
+  <section class="top-stories">
+    <article class="top-story" type="reset" onclick="location.href='news.html'">
+      <img src="https://via.placeholder.com/800x400">
+      <div class="top-story-content">
+        <h3>TOP HEADLINE 1</h3>
+        <p>Short summary of the top news article.</p>
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="3000">
-          <img src="image.png" class="d-block w-100">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quo.</p>
-            <span><button id="carousel-btn" class=" btn btn-primary" type="reset"
-                onclick="location.href='news.html'">READ NOW!</button></span>
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img src="image.png" class="d-block w-100">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Lorem ipsum dolor sit amet.</h5>
-
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, molestiae?</p>
-            <span><button id="carousel-btn" class=" btn btn-primary" type="reset"
-                onclick="location.href='news.html'">READ NOW!</button></span>
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img src="image.png" class="d-block w-100">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita?</h5>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ratione animi!</p>
-            <span><button id="carousel-btn" class=" btn btn-primary" type="reset"
-                onclick="location.href='news.html'">READ NOW!</button></span>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
+    </article>
+    <article class="top-story" type="reset" onclick="location.href='news.html'">
+      <img src="https://via.placeholder.com/800x400">
+      <div class="top-story-content">
+        <h3>TOP HEADLINE 2</h3>
+        <p>Short summary of the top news article.</p>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+    </article>
+  </section>
+
+  <!-- CONTENT (LATEST NEWS SECTION): ĐÃ HOÀN THÀNH -->
+  <div class="content-container">
+    <section class="latest-news">
+      <h2>LATEST NEWS</h2>
+      <div class="latest-news-item" type="reset" onclick="location.href='news.html'">
+        <img src="https://via.placeholder.com/150x100">
+        <div>
+          <h4>HEADLINE 1</h4>
+          <p>Short summary of the latest news article.</p>
+        </div>
+      </div>
+      <div class="latest-news-item" type="reset" onclick="location.href='news.html'">
+        <img src="https://via.placeholder.com/150x100">
+        <div>
+          <h4>HEADLINE 2</h4>
+          <p>Short summary of the latest news article.</p>
+        </div>
+      </div>
+      <div class="latest-news-item" type="reset" onclick="location.href='news.html'">
+        <img src="https://via.placeholder.com/150x100">
+        <div>
+          <h4>HEADLINE 3</h4>
+          <p>Short summary of the latest news article.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CONTENT (CATEGORIES SECTION): ĐÃ HOÀN THÀNH -->
+  <div class="content-container">
+    <section class="categories">
+      <h2>CATEGORIES</h2>
+      <div class="category">
+        <article class="category-item" type="reset" onclick="location.href='404.html'">
+          <img src="https://via.placeholder.com/400x200">
+          <h4>WORLD</h4>
+          <p>Summary of world category.</p>
+        </article>
+        <article class="category-item" type="reset" onclick="location.href='404.html'">
+          <img src="https://via.placeholder.com/400x200">
+          <h4>BUSINESS</h4>
+          <p>Summary of business category.</p>
+        </article>
+        <article class="category-item" type="reset" onclick="location.href='404.html'">
+          <img src="https://via.placeholder.com/400x200">
+          <h4>HEALTH</h4>
+          <p>Summary of health category.</p>
+        </article>
+        <article class="category-item" type="reset" onclick="location.href='404.html'">
+          <img src="https://via.placeholder.com/400x200">
+          <h4>EDUCATION</h4>
+          <p>Summary of education category.</p>
+        </article>
+        <article class="category-item" type="reset" onclick="location.href='404.html'">
+          <img src="https://via.placeholder.com/400x200">
+          <h4>ENTERTAINMENT</h4>
+          <p>Summary of entertainment category.</p>
+        </article>
+        <article class="category-item" type="reset" onclick="location.href='404.html'">
+          <img src="https://via.placeholder.com/400x200">
+          <h4>ARTS</h4>
+          <p>Summary of arts category.</p>
+        </article>
+      </div>
+    </section>
   </div>
 
   <!-- BACK TOP TOP BUTTON: ĐÃ HOÀN THÀNH -->
@@ -169,9 +193,6 @@
           d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
       </svg></a>
   </div>
-
-  <main style="height: 1000px;"></main>
-
 
   <!-- FOOTER: ĐÃ HOÀN THÀNH -->
   <footer>

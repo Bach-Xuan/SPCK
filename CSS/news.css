@@ -28,6 +28,10 @@
     color: #555;
 }
 
+.article-content p {
+    align-items: center;
+}
+
 .card-body a {
     font-weight: 900;
 }

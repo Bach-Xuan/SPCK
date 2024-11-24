@@ -1,5 +1,4 @@
-/* ĐÃ HOÀN THÀNH */
-.brandnav {
+.navbrand {
     justify-content: space-between;
     align-items: center;
     background-color: white;
@@ -11,26 +10,28 @@
     font-size: 36.8px;
 }
 
-.brandnav-logo {
+.navbrand-logo {
     text-align: center;
 }
 
-.brandnav-logo a {
+.navbrand-logo a {
     text-decoration: none;
 }
 
-.brandnav-logo img {
+.navbrand-logo img {
     width: 80px;
     height: auto;
     text-align: center;
+    /* TRANSITION MƯỢT */
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.brandnav-logo a:hover img {
+.navbrand-logo a:hover img {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
 }
 
+/* SHAKE */
 @keyframes shake {
     0% {
         transform: translate(1px, 1px) rotate(0deg);

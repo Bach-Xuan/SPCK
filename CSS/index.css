@@ -5,7 +5,7 @@
     padding: 20px 0;
 }
 
-/* TOP SECTION: ĐÃ HOÀN THÀNH */
+/* TOP SECTION */
 .top-stories {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -23,10 +23,12 @@
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 1px solid #4a73e8;
+    /* TRANSITION MƯỢT */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .top-story:hover {
+    /* HIỆU ỨNG NỔI */
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
@@ -54,7 +56,7 @@
     font-weight: 500;
 }
 
-/* CATEGORIES SECTION: ĐÃ HOÀN THÀNH */
+/* CATEGORIES SECTION */
 .categories {
     margin-top: 40px;
     padding-bottom: 80px;
@@ -81,10 +83,12 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border: 1px solid #4a73e8;
+    /* TRANSITION MƯỢT */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .category-item:hover {
+    /* HIỆU ỨNG NỔI */
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
@@ -106,7 +110,7 @@
     font-weight: 600;
 }
 
-/* LATEST NEWS SECTION: ĐÃ HOÀN THÀNH */
+/* LATEST NEWS SECTION */
 .latest-news {
     margin-top: 40px;
 }
@@ -126,10 +130,12 @@
     padding: 10px;
     border: 1px solid #4a73e8;
     border-radius: 8px;
+    /* TRANSITION MƯỢT */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .latest-news-item:hover {
+    /* HIỆU ỨNG NỔI */
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
@@ -155,6 +161,7 @@
     font-weight: 400;
 }
 
+/* SHAKE */
 @media (max-width: 768px) {
 
     .top-story,

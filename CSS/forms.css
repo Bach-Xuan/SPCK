@@ -1,15 +1,11 @@
-/* ĐÃ HOÀN THÀNH */
 .form-container {
     width: 100%;
     max-width: 9999px;
     padding: 100px;
-
     border-radius: 10px;
     text-align: center;
     background-color: white;
-
     display: grid;
-
     justify-content: center;
 }
 
@@ -29,6 +25,7 @@ label {
     margin-bottom: 5px;
 }
 
+/* CSS CHO CÁC LOẠI INPUT */
 input[type="text"],
 textarea,
 input[type="file"],
@@ -69,6 +66,7 @@ input[type="file"] {
     font-size: 1.2em;
     font-weight: 900;
     cursor: pointer;
+    /* TRANSITION MƯỢT */
     transition: background-color 0.3s ease;
 }
 

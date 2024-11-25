@@ -1,4 +1,3 @@
-/* ĐÃ HOÀN THÀNH */
 .content-container {
     padding-left: 100px;
     padding-right: 100px;
@@ -60,10 +59,12 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border: 1px solid #4a73e8;
+    /* TRANSITION MƯỢT */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .category-item:hover {
+    /* HIỆU ỨNG NỔI */
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }

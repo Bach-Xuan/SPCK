@@ -76,3 +76,18 @@ input[type="file"] {
     margin-left: 10px;
     margin-right: 10px;
 }
+
+/* CSS CHO HIỂN THỊ MẬT KHẨU */
+.toggle-eye {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 17px;
+    color: #4a73e8;
+}
+
+.toggle-eye:hover {
+    color: #3a5ec4;
+}

@@ -147,6 +147,7 @@
       <div class="form-group">
         <div class="form-floating">
           <input id="input-password" type="password" class="form-control" placeholder="Password" required>
+          <span id="toggleEye" class="toggle-eye" onclick="togglePasswordVisibility()">o-o</span>
           <label>Password</label>
         </div>
       </div>
@@ -168,6 +169,20 @@
         document.getElementById("login-btn").click();
       }
     });
+
+    // HIỂN THỊ MẬT KHẨU
+    function togglePasswordVisibility() {
+      const passwordInput = document.getElementById('input-password');
+      const toggleEye = document.getElementById('toggleEye');
+
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleEye.textContent = '-_-'; // KHÔNG HIỂN THỊ
+      } else {
+        passwordInput.type = 'password';
+        toggleEye.textContent = 'o-o'; // HIỂN THỊ
+      }
+    }
 
     // ĐẢM BẢO INPUT PHẢI CÓ GIÁ TRỊ TRƯỚC KHI SUBMIT
     function submitAndRedirect(event) { // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU MẪU

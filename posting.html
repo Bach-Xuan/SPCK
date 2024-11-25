@@ -115,6 +115,7 @@
         d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
     </svg></button>
   <script>
+
     const backToTopButton = document.getElementById('backToTop');
 
     // ĐIỀU KIỆN XUẤT HIỆN
@@ -132,12 +133,13 @@
         behavior: 'smooth'
       });
     }
+
   </script>
 
   <!-- CONTENT -->
   <div class="form-container">
     <h1>POST A ARTICLE</h1>
-    <form>
+    <form id="posting">
       <div class="form-group">
         <div class="form-floating">
           <input type="text" class="form-control" id="input-title" placeholder="Title" required>
@@ -184,6 +186,7 @@
           <input type="file" class="form-control" id="input-signature" required>
         </div>
       </div>
+
       <!-- reCAPTCHA -->
       <div class="g-recaptcha" data-sitekey="6LdnoIQqAAAAAI-ZWUhK-NEBvwTMJE1nkaK1jS92"></div>
       <br />
@@ -193,11 +196,12 @@
           You will recieve an email if your article was rejected.
         </p>
       </div>
-      <button id="submit-btn" type="reset" onclick="location.href='home.html'" class="submit-button">SUBMIT!</button>
+      <button id="submit-btn" type="submit" onclick="submitAndRedirect(event)" class="submit-button">SUBMIT!</button>
     </form>
   </div>
-  <!-- KÍCH HOẠT NÚT "SUBMIT!" BẰNG CÁCH NHẤN PHÍM "Enter" -->
   <script>
+
+    // KÍCH HOẠT NÚT "SUBMIT!" BẰNG CÁCH NHẤN PHÍM "Enter"
     var input = document.getElementById("input-thumbnail");
     input.addEventListener("keypress", function (event) {
       if (event.key === "Enter") {
@@ -205,7 +209,24 @@
         document.getElementById("submit-btn").click();
       }
     });
+
+    // ĐẢM BẢO INPUT PHẢI CÓ GIÁ TRỊ TRƯỚC KHI SUBMIT
+    function submitAndRedirect(event) {  // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU MẪU
+      event.preventDefault();
+
+      const form = document.getElementById('posting');
+
+      // KIỂM TRA XEM FORM CÓ GIÁ TRỊ INPUT CHƯA
+      if (form.checkValidity()) {
+        form.submit();
+        window.location.href = 'index.html';
+      } else { // HIỂN THỊ THÔNG BÁO XÁC THỰC CHO CÁC TRƯỜNG HỢP KHÔNG HỢP LỆ
+        form.reportValidity();
+      }
+    }
+
   </script>
+
   <!-- ELEMENT ẢO NHẰM ĐẨY FOOTER XUỐNG CUỐI TRANG -->
   <main style="height: 350px;"></main>
 

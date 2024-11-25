@@ -113,6 +113,7 @@
         d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
     </svg></button>
   <script>
+
     const backToTopButton = document.getElementById('backToTop');
 
     // ĐIỀU KIỆN XUẤT HIỆN
@@ -130,12 +131,13 @@
         behavior: 'smooth'
       });
     }
+
   </script>
 
   <!-- CONTENT -->
   <div class="form-container">
     <h1>REGISTER</h1>
-    <form>
+    <form id="register">
       <div class="form-group">
         <div class="form-floating">
           <input type="password" class="form-control" id="input-password" placeholder="Password" onkeyup='check();'
@@ -156,24 +158,31 @@
           <span id='message'></span>
         </div>
       </div>
-      <button id="back-btn" type="reset" onclick="location.href='registerP1.html'" class="submit-button">BACK!</button>
-      <button id="create-btn" type="reset" onclick="location.href='index.html'" class="submit-button">CREATE!</button>
+      <button id="back-btn" type="submit" onclick="submitAndRedirect(event)" class="submit-button">BACK!</button>
+      <button id="create-btn" type="submit" onclick="submitAndRedirect(event)" class="submit-button">CREATE!</button>
     </form>
   </div>
   <script>
+
     // XEM XÉT SỰ TƯƠNG ĐỒNG KHI LẶP LẠI PASSWORD ĐỐI VỚI PASSWORD GỐC
     var check = function () {
-      if (
+      if ( // NẾU HAI INPUT CÓ GIÁ TRỊ BẰNG NHAU THÌ XUẤT THÔNG BÁO "MATCHED"
         document.getElementById("input-password").value ==
         document.getElementById("confirm-password").value
       ) {
         document.getElementById("message").style.color = "#4a73e8";
         document.getElementById("message").innerHTML = "MATCHED";
-      } else {
+      } else if ( // NẾU MỘT TRONG HAI INPUT CÓ GIÁ TRị BẰNG 0 THÌ KHÔNG CÓ HÀNH ĐỘNG
+        document.getElementById("input-password").value == 0 ||
+        document.getElementById("confirm-password").value == 0
+      ) {
+        document.getElementById("message").innerHTML = " ";
+      } else { // NẾU HAI GIÁ TRỊ INPUT KHÁC NHAU VÀ KHÁC 0 THÌ XUẤT THÔNG BÁO "NOT MATCHING"
         document.getElementById("message").style.color = "red";
         document.getElementById("message").innerHTML = "NOT MATCHING";
       }
     };
+
     // KÍCH HOẠT NÚT "CREATE!" BẰNG CÁCH NHẤN "Enter"
     var input = document.getElementById("confirm-password");
     input.addEventListener("keypress", function (event) {
@@ -182,7 +191,24 @@
         document.getElementById("create-btn").click();
       }
     });
+
+    // ĐẢM BẢO INPUT PHẢI CÓ GIÁ TRỊ TRƯỚC KHI SUBMIT
+    function submitAndRedirect(event) {  // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU MẪU
+      event.preventDefault();
+
+      const form = document.getElementById('register');
+
+      // KIỂM TRA XEM FORM CÓ GIÁ TRỊ INPUT CHƯA
+      if (form.checkValidity()) {
+        form.submit();
+        window.location.href = 'index.html';
+      } else { // HIỂN THỊ THÔNG BÁO XÁC THỰC CHO CÁC TRƯỜNG HỢP KHÔNG HỢP LỆ
+        form.reportValidity();
+      }
+    }
+
   </script>
+
   <!-- ELEMENT ẢO NHẰM ĐẨY FOOTER XUỐNG CUỐI TRANG -->
   <main style="height: 350px;"></main>
 

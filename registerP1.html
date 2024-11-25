@@ -115,6 +115,7 @@
         d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
     </svg></button>
   <script>
+
     const backToTopButton = document.getElementById('backToTop');
 
     // ĐIỀU KIỆN XUẤT HIỆN
@@ -132,12 +133,13 @@
         behavior: 'smooth'
       });
     }
+
   </script>
 
   <!-- CONTENT -->
   <div class="form-container">
     <h1>REGISTER</h1>
-    <form>
+    <form id="register">
       <div class="form-group">
         <div class="form-floating">
           <input type="text" class="form-control" placeholder="Username" required>
@@ -162,11 +164,12 @@
           By creating an account, you agree to our <a href="404.html">TERMS AND CONDITIONS</a>.
         </p>
       </div>
-      <button id="next-btn" type="reset" onclick="location.href='registerP2.html'" class="submit-button">NEXT!</button>
+      <button id="next-btn" type="submit" onclick="submitAndRedirect(event)" class="submit-button">NEXT!</button>
     </form>
   </div>
-  <!-- KÍCH HOẠT NÚT "NEXT!" BẰNG CÁCH NHẤN PHÍM "Enter" -->
   <script>
+
+    // KÍCH HOẠT NÚT "NEXT!" BẰNG CÁCH NHẤN PHÍM "Enter"
     var input = document.getElementById("input-email");
     input.addEventListener("keypress", function (event) {
       if (event.key === "Enter") {
@@ -174,7 +177,24 @@
         document.getElementById("next-btn").click();
       }
     });
+
+    // ĐẢM BẢO INPUT PHẢI CÓ GIÁ TRỊ TRƯỚC KHI SUBMIT
+    function submitAndRedirect(event) {  // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU MẪU
+      event.preventDefault();
+
+      const form = document.getElementById('register');
+
+      // KIỂM TRA XEM FORM CÓ GIÁ TRỊ INPUT CHƯA
+      if (form.checkValidity()) {
+        form.submit();
+        window.location.href = 'registerP2.html';
+      } else { // HIỂN THỊ THÔNG BÁO XÁC THỰC CHO CÁC TRƯỜNG HỢP KHÔNG HỢP LỆ
+        form.reportValidity();
+      }
+    }
+
   </script>
+
   <!-- ELEMENT ẢO NHẰM ĐẨY FOOTER XUỐNG CUỐI TRANG -->
   <main style="height: 350px;"></main>
 

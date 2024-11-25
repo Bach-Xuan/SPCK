@@ -113,6 +113,7 @@
         d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
     </svg></button>
   <script>
+
     const backToTopButton = document.getElementById('backToTop');
 
     // ĐIỀU KIỆN XUẤT HIỆN
@@ -130,12 +131,13 @@
         behavior: 'smooth'
       });
     }
+
   </script>
 
   <!-- CONTENT -->
   <div class="form-container">
     <h1>LOGIN</h1>
-    <form>
+    <form id="login">
       <div class="form-group">
         <div class="form-floating">
           <input type="text" class="form-control" placeholder="Username" required>
@@ -144,7 +146,7 @@
       </div>
       <div class="form-group">
         <div class="form-floating">
-          <input type="password" class="form-control" placeholder="Password" required>
+          <input id="input-password" type="password" class="form-control" placeholder="Password" required>
           <label>Password</label>
         </div>
       </div>
@@ -153,9 +155,36 @@
           Don't have an account? <a href="registerP1.html">Create one now!</a>
         </p>
       </div>
-      <button type="reset" onclick="location.href='index.html'" class="submit-button">I'M BACK!</button>
+      <button id="login-btn" type="submit" onclick="submitAndRedirect(event)" class="submit-button">I'M BACK!</button>
     </form>
   </div>
+  <script>
+
+    // KÍCH HOẠT NÚT "I'M BACK!" BẰNG CÁCH NHẤN PHÍM "Enter"
+    var input = document.getElementById("input-password");
+    input.addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("login-btn").click();
+      }
+    });
+
+    // ĐẢM BẢO INPUT PHẢI CÓ GIÁ TRỊ TRƯỚC KHI SUBMIT
+    function submitAndRedirect(event) { // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU MẪU
+      event.preventDefault();
+
+      const form = document.getElementById('login');
+
+      // KIỂM TRA XEM FORM CÓ GIÁ TRỊ INPUT CHƯA
+      if (form.checkValidity()) {
+        form.submit();
+        window.location.href = 'index.html';
+      } else { // HIỂN THỊ THÔNG BÁO XÁC THỰC CHO CÁC TRƯỜNG HỢP KHÔNG HỢP LỆ
+        form.reportValidity();
+      }
+    }
+
+  </script>
   <!-- ELEMENT ẢO NHẰM ĐẨY FOOTER XUỐNG CUỐI TRANG -->
   <main style="height: 350px;"></main>
 

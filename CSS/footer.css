@@ -32,7 +32,8 @@ footer {
 
 .footer-social-icons a:hover svg {
     filter: brightness(0) saturate(100%) invert(40%) sepia(100%) saturate(500%) hue-rotate(200deg);
-    transform: scale(1.2);
+    transform: scale(1.5);
+    color: #3a5ec4;
 }
 
 .footer-logo-container {

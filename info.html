@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/content.css">
+    <link rel="stylesheet" href="CSS/navbrand.css">
+    <link rel="stylesheet" href="CSS/navbar.css">
+    <link rel="stylesheet" href="CSS/notification.css">
+    <link rel="stylesheet" href="CSS/backtotop.css">
+    <link rel="stylesheet" href="CSS/post.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- FONT CHỮ LATO -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" />
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- NAVBRAND -->
+    <nav>
+        <div class="navbrand">
+            <div class="navbrand-logo">
+                <a href="index.html"><img src="image/logo.png">
+                    <span>THE DAILY SPEAKER</span></a>
+            </div>
+    </nav>
+
+    <!-- NAVBAR -->
+    <nav class="navbar sticky-top navbar-expand-lg bg-primary">
+        <div class="container-fluid">
+            <a type="button" class="navbar-home" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z" />
+                    <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" />
+                </svg></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex form-item" role="search">
+                <input class="form-control me-2 btn-search" type="search" placeholder="Search" aria-label="Search">
+                <button type="reset" onclick="location.href='404.html'" class="btn btn-outline-success"><svg
+                        style="color: white;" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg></button>
+            </form>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a style="color: white;" class="nav-link active" aria-current="page"
+                            href="categories/world.html">WORLD</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a style="color: white;" class="nav-link active" aria-current="page"
+                            href="categories/business.html">BUSINESS</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a style="color: white;" class="nav-link active" aria-current="page"
+                            href="categories/health.html">HEALTH</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a style="color: white;" class="nav-link active" aria-current="page"
+                            href="categories/education.html">EDUCATION</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a style="color: white;" class="nav-link active" aria-current="page"
+                            href="categories/entertainment.html">ENTERTAINMENT</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a style="color: white;" class="nav-link active" aria-current="page"
+                            href="categories/sports.html">SPORTS</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a style="color: white;" class="nav-link active" aria-current="page"
+                            href="categories/arts.html">ARTS</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="login-btn">
+                <button type="reset" onclick="location.href='login.html'"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                    </svg></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- NOTIFICATION -->
+    <div class="notification">
+        <a href="404.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-bell-fill" viewBox="0 0 16 16">
+                <path
+                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
+            </svg></a>
+    </div>
+
+    <!-- BACK TOP TOP BUTTON -->
+    <button id="backToTop" onclick="scrollToTop()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+            <path
+                d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+        </svg></button>
+    <script>
+
+        const backToTopButton = document.getElementById('backToTop');
+
+        // ĐIỀU KIỆN XUẤT HIỆN
+        window.onscroll = function () {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 300) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+    </script>
+
+    <!-- POST -->
+    <div id="post">
+        <a href="https://bach-xuan.github.io/SPCK/posting.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+            </svg></a>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="info-container">
+        <h1>PRIVACY POLICY</h1>
+        <span>Effective Date: [Date]</span>
+        <p>At The Daily Speaker , we are committed to protecting your privacy. This Privacy
+            Policy explains how we collect, use, share, and protect your personal information when you visit our website
+            [Insert Website URL], use our services, or interact with us in any way. By accessing or using our website,
+            you
+            agree to the terms of this Privacy Policy.</p>
+        <h2>1. Information We Collect</h2>
+        <p>We collect two types of information:</p>
+        <h4>Personal Information</h4>
+        <p>This includes any information that identifies you personally, such as:</p>
+        <ul>
+            <li>Name</li>
+            <li>Email address</li>
+            <li>Subscription details</li>
+            <li>Account information (if applicable)</li>
+        </ul>
+        <h4>Non-Personal Information</h4>
+        <p>This includes data that does not identify you personally but helps us improve the functionality of our
+            website.
+            This includes:</p>
+        <ul>
+            <li>IP address</li>
+            <li>Browser type and version</li>
+            <li>Device information</li>
+            <li>Cookies and usage data (e.g., pages visited, time spent on pages)</li>
+        </ul>
+        <h2>2. How We Use Your Information</h2>
+        <p>We use the information we collect for the following purposes:</p>
+        <ul>
+            <li>To provide, operate, and improve our services and website</li>
+            <li>To personalize content and advertising</li>
+            <li>To respond to inquiries or feedback</li>
+            <li>To send newsletters, updates, and promotional materials (if you opt-in)</li>
+            <li>To analyze site usage to improve user experience</li>
+            <li>To comply with legal obligations</li>
+        </ul>
+        <h2>3. Cookies and Tracking Technologies</h2>
+        <p>Our website uses cookies, web beacons, and similar tracking technologies to enhance user experience, track
+            site
+            usage, and deliver targeted advertising. You can manage or disable cookies through your browser settings,
+            but
+            doing so may impact some features of the site.</p>
+        <h2>4. Sharing Your Information</h2>
+        <p>We do not sell, rent, or lease your personal information to third parties. We may share your information in
+            the
+            following situations:</p>
+        <ul>
+            <li>With service providers: We may share information with third-party vendors who perform services on our
+                behalf
+                (e.g., hosting, analytics, marketing).</li>
+            <li>For legal reasons: If required by law, we may disclose your information to comply with legal processes,
+                such
+                as court orders or subpoenas.</li>
+            <li>In case of business transfer: If we are involved in a merger, acquisition, or sale of assets, your
+                information may be transferred as part of that transaction.</li>
+        </ul>
+        <h2>5. Third-Party Links</h2>
+        <p>Our website may contain links to third-party websites or services that are not operated by us. We are not
+            responsible for the privacy practices of these external sites. Please review their privacy policies before
+            providing any personal information.</p>
+        <h2>6. Data Security</h2>
+        <p>We take reasonable steps to protect your personal information from unauthorized access, alteration, or
+            destruction. However, no method of data transmission over the internet is 100% secure. We cannot guarantee
+            the
+            absolute security of your information.</p>
+        <h2>7. Your Rights and Choices</h2>
+        <p>You have the right to:</p>
+        <ul>
+            <li>Access, update, or correct your personal information.</li>
+            <li>Opt-out of receiving promotional emails by clicking the "unsubscribe" link in the email.</li>
+            <li>Request the deletion of your personal data (subject to certain legal exceptions).</li>
+        </ul>
+        <p>If you wish to exercise these rights or have any questions regarding your personal information, please
+            contact us
+            at [contact information].</p>
+        <h2>8. Children's Privacy</h2>
+        <p>Our website is not intended for children under the age of 13, and we do not knowingly collect personal
+            information from children. If we become aware that we have inadvertently collected personal information from
+            a
+            child, we will take steps to delete that information.</p>
+        <h2>9. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices, services, or
+            applicable
+            laws. We will notify you of any significant changes by posting the updated policy on this page with a
+            revised
+            "Effective Date." We encourage you to review this policy periodically.</p>
+        <h2>10. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, or if you wish to exercise your privacy rights, please
+            contact us at:</p>
+        <p>[Contact Information]</p>
+
+        <h1>TERMS OF SERVICE</h1>
+        <span>Effective date: [Date]</span>
+        <h2>7. Subscriptions and Payments</h2>
+        <p>Some services or content on the Site may be available through a subscription or require payment. If you
+            choose to subscribe or make a payment, you agree to provide accurate and complete payment information. You
+            are responsible for ensuring your subscription remains current, and you agree to pay all applicable fees.
+        </p>
+        <p>Subscriptions may be subject to auto-renewal, and you may cancel your subscription by following the
+            instructions provided on the Site.</p>
+        <h2>8. Privacy and Data Collection</h2>
+        <p>Your use of the Site is also governed by our Privacy Policy, which explains how we collect, use, and protect
+            your personal information. By using the Site, you consent to the collection and use of your information as
+            outlined in the Privacy Policy.</p>
+        <h2>9. Disclaimers</h2>
+        <p>The Site and its content are provided "as is" and "as available." We make no warranties or representations
+            regarding the accuracy, reliability, or availability of the Site or its content. We do not guarantee that
+            the Site will be error-free or uninterrupted.
+
+            We are not responsible for any loss or damage arising from your use of the Site, including any loss of data
+            or interruption of service.</p>
+        <h2>10. Limitation of Liability</h2>
+        <p>To the fullest extent permitted by law, The Daily Speaker, its affiliates, and its employees will not
+            be liable for any indirect, incidental, consequential, or punitive damages arising out of or in connection
+            with your use of the Site.
+
+            In no event will our total liability to you exceed the amount you have paid, if any, for access to the Site
+            or services in the six months preceding the event that caused the damage.</p>
+        <h2>11. Indemnification</h2>
+        <p>You agree to indemnify and hold The Daily Speaker, its officers, employees, and agents harmless from
+            any claims, losses, damages, liabilities, or expenses (including legal fees) arising from your use of the
+            Site, violation of these Terms, or infringement of any rights of third parties.</p>
+        <h2>12. Governing Law and Dispute Resolution</h2>
+        <p>These Terms are governed by and construed in accordance with the laws of [Jurisdiction]. Any disputes
+            arising under or in connection with these Terms will be resolved through binding arbitration in [Location],
+            and you agree to waive any right to a jury trial.</p>
+        <h2>13. Termination</h2>
+        <p>We reserve the right to suspend or terminate your access to the Site at any time, for any reason, including
+            if you violate these Terms. Upon termination, your right to use the Site will immediately cease, but
+            provisions that by their nature should survive termination will remain in effect.</p>
+        <h2>14. Third-Party Links and Services</h2>
+        <p>The Site may contain links to third-party websites or services that are not controlled by us. We are not
+            responsible for the content, privacy policies, or practices of these third-party sites. You acknowledge and
+            agree that we are not liable for any loss or damage caused by your use of such third-party services.</p>
+        <h2>15. Contact Information</h2>
+        <p>If you have any questions or concerns regarding these Terms of Service, please contact us at:</p>
+        <p>[Contact Information]</p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo-container">
+            <span>____________________________________________________</span>
+            <a href="index.html"><img src="image/logo.png" />
+                <span>THE DAILY SPEAKER</span></a>
+            <span>____________________________________________________</span>
+        </div>
+        <div class="footer-texts">
+            <p>&copy; 2024 THE DAILY SPEAKER. ALL RIGHTS RESERVED.</p>
+            <p>
+                <a href="404.html">PRIVACY POLICY</a> | <a href="404.html">TERMS OF SERVICE</a> |
+                <a href="404.html">CONTACT US</a>
+            </p>
+            <div class="footer-social-icons">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-youtube" viewBox="0 0 16 16">
+                        <path
+                            d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+                    </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                    </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-twitter-x" viewBox="0 0 16 16">
+                        <path
+                            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                    </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-tiktok" viewBox="0 0 16 16">
+                        <path
+                            d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
+                    </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                    </svg></a>
+            </div>
+            <main style="height: 60px;"></main>
+    </footer>
+
+</body>
+
+</html>

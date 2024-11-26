@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="stylesheet" href="CSS/notification.css">
     <link rel="stylesheet" href="CSS/backtotop.css">
+    <link rel="stylesheet" href="CSS/post.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +31,7 @@
     <nav>
         <div class="navbrand">
             <div class="navbrand-logo">
-                <a href="index.html"><img src="./img/logo.png">
+                <a href="index.html"><img src="image/logo.png">
                     <span>THE DAILY SPEAKER</span></a>
             </div>
     </nav>
@@ -61,34 +62,38 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ">
                     <li class="nav-item">
-                        <a style="color: white;" class="nav-link active" aria-current="page" href="404.html">WORLD</a>
+                        <a style="color: white;" class="nav-link active" aria-current="page"
+                            href="categories/world.html">WORLD</a>
                     </li>
 
                     <li class="nav-item">
                         <a style="color: white;" class="nav-link active" aria-current="page"
-                            href="404.html">BUSINESS</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a style="color: white;" class="nav-link active" aria-current="page" href="404.html">HEALTH</a>
+                            href="categories/business.html">BUSINESS</a>
                     </li>
 
                     <li class="nav-item">
                         <a style="color: white;" class="nav-link active" aria-current="page"
-                            href="404.html">EDUCATION</a>
+                            href="categories/health.html">HEALTH</a>
                     </li>
 
                     <li class="nav-item">
                         <a style="color: white;" class="nav-link active" aria-current="page"
-                            href="404.html">ENTERTAINMENT</a>
+                            href="categories/education.html">EDUCATION</a>
                     </li>
 
                     <li class="nav-item">
-                        <a style="color: white;" class="nav-link active" aria-current="page" href="404.html">SPORTS</a>
+                        <a style="color: white;" class="nav-link active" aria-current="page"
+                            href="categories/entertainment.html">ENTERTAINMENT</a>
                     </li>
 
                     <li class="nav-item">
-                        <a style="color: white;" class="nav-link active" aria-current="page" href="404.html">ARTS</a>
+                        <a style="color: white;" class="nav-link active" aria-current="page"
+                            href="categories/sports.html">SPORTS</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a style="color: white;" class="nav-link active" aria-current="page"
+                            href="categories/arts.html">ARTS</a>
                     </li>
                 </ul>
             </div>
@@ -128,15 +133,24 @@
                 backToTopButton.style.display = "none";
             }
         };
-        
+
         function scrollToTop() {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         }
-        
+
     </script>
+
+    <!-- POST -->
+    <div id="post">
+        <a href="https://bach-xuan.github.io/SPCK/posting.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+            </svg></a>
+    </div>
 
     <!-- CONTENT (ARTICLE) -->
     <div class="content-container">
@@ -170,7 +184,7 @@
                     Natus
                     delectus possimus distinctio impedit quisquam sit. Fugit placeat obcaecati facere architecto ipsam
                     in
-                    <img style="padding: 20px; align-items: center;" src="img/570x285.png">
+                    <img style="padding: 20px; align-items: center;" src="image/570x285.png">
                     libero fugiat accusamus odio doloribus tempora delectus eaque tempore harum dolor necessitatibus
                     blanditiis repellendus provident laboriosam aliquid voluptatum, culpa, aliquam ut? Consequatur velit
                     fuga corporis enim quia voluptatibus ipsa cupiditate itaque natus ad? Consequatur labore blanditiis
@@ -194,7 +208,7 @@
                     et,
                     voluptatum minus eius odit fugiat fugit amet qui dolores omnis, sint, illum neque incidunt veritatis
                     magnam. Quam, eaque in!
-                    <img style="padding: 20px; align-items: center;" src="img/570x285.png">
+                    <img style="padding: 20px; align-items: center;" src="image/570x285.png">
                     Eius aliquam error amet nemo eligendi iure libero quasi perspiciatis non!
                     At, distinctio labore quam laudantium consequuntur temporibus, nobis, dolores ipsum fugit hic nulla
                     vero
@@ -237,7 +251,7 @@
                     voluptate. A, ratione. Laborum quia ipsam eum voluptatibus quisquam dicta amet reiciendis voluptates
                     neque tempore unde, tenetur dolorem, cum, aspernatur itaque in. Voluptatibus adipisci quod
                     reiciendis
-                    <img style="padding: 20px; align-items: center;" src="img/570x285.png">
+                    <img style="padding: 20px; align-items: center;" src="image/570x285.png">
                     quidem aliquam inventore, aut beatae tempora obcaecati placeat, tempore vero ipsam cupiditate dicta
                     officiis earum voluptates dignissimos veritatis, magnam repellendus? Officia dolores ratione
                     distinctio
@@ -271,17 +285,17 @@
             <h2>YOU MIGHT BE INTERESTED</h2>
             <div class="category">
                 <article class="category-item" type="reset" onclick="location.href='news.html'">
-                    <img src="img/400x200.png">
+                    <img src="image/400x200.png">
                     <h4>HEADLINE 1</h4>
                     <p>Short summary of the news article.</p>
                 </article>
                 <article class="category-item" type="reset" onclick="location.href='news.html'">
-                    <img src="img/400x200.png">
+                    <img src="image/400x200.png">
                     <h4>HEADLINE 2</h4>
                     <p>Short summary of the news article.</p>
                 </article>
                 <article class="category-item" type="reset" onclick="location.href='news.html'">
-                    <img src="img/400x200.png">
+                    <img src="image/400x200.png">
                     <h4>HEADLINE 3</h4>
                     <p>Short summary of the news article.</p>
                 </article>
@@ -293,7 +307,7 @@
     <footer>
         <div class="footer-logo-container">
             <span>____________________________________________________</span>
-            <a href="index.html"><img src="./img/logo.png" />
+            <a href="index.html"><img src="image/logo.png" />
                 <span>THE DAILY SPEAKER</span></a>
             <span>____________________________________________________</span>
         </div>
@@ -330,6 +344,7 @@
                             d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
                     </svg></a>
             </div>
+            <main style="height: 60px;"></main>
     </footer>
 
 </body>

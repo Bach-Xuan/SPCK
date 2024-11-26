@@ -1,6 +1,6 @@
-.notification a {
+#post {
     position: fixed;
-    bottom: 80px;
+    bottom: 20px;
     right: 20px;
     background-color: white;
     color: #4a73e8;
@@ -14,6 +14,7 @@
     line-height: 30px;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
     z-index: 1000;
     transition: opacity 0.3s, transform 0.3s;
     display: flex;
@@ -21,8 +22,12 @@
     align-items: center;
 }
 
-.notification a:hover {
+#post:hover {
     background-color: #4a73e8;
     color: white;
     transform: scale(1.2);
+}
+
+#post:hover svg {
+    color: white;
 }

@@ -159,7 +159,8 @@
           <span id='message'></span>
         </div>
       </div>
-      <button id="back-btn" type="submit" onclick="submitAndRedirect(event)" class="submit-button">BACK!</button>
+      <button id="back-btn" type="reset" onclick="window.location.href='registerP1.html';"
+        class="submit-button">BACK!</button>
       <button id="create-btn" type="submit" onclick="submitAndRedirect(event)" class="submit-button">CREATE!</button>
     </form>
   </div>
@@ -184,13 +185,24 @@
       }
     };
 
-    // KÍCH HOẠT NÚT "CREATE!" BẰNG CÁCH NHẤN "Enter"
-    var input = document.getElementById("confirm-password");
-    input.addEventListener("keypress", function (event) {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        document.getElementById("create-btn").click();
-      }
+    // CHUYỂN ĐẾN CÁC ELEMENTS TIẾP THEO BẰNG CÁCH NHẤN PHÍM "Enter"
+    const inputs = document.querySelectorAll("#register input"); // CHỌN TẤT CẢ INPUT TRONG FORM
+
+    inputs.forEach((input, index) => {
+      input.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          event.preventDefault(); // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU MẪU
+
+          // CHUYỂN ĐẾN INPUT TIẾP THEO NẾU CÓ
+          const nextInput = inputs[index + 1];
+          if (nextInput) {
+            nextInput.focus();
+          } else {
+            // CHUYỂN ĐẾN NÚT "CREATE!" NẾU KHÔNG CÒN INPUT
+            document.querySelector("#register #create-btn").focus();
+          }
+        }
+      });
     });
 
     // HIỂN THỊ MẬT KHẨU
@@ -216,7 +228,8 @@
       // KIỂM TRA XEM FORM CÓ GIÁ TRỊ INPUT CHƯA
       if (form.checkValidity()) {
         form.submit();
-        window.location.href = 'index.html';
+        alert('ACCOUNT CREATED!'); // THÔNG BÁO ĐĂNG KÝ THÀNH CÔNG
+        window.location.href = 'login.html';
       } else { // HIỂN THỊ THÔNG BÁO XÁC THỰC CHO CÁC TRƯỜNG HỢP KHÔNG HỢP LỆ
         form.reportValidity();
       }

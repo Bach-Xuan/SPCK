@@ -77,7 +77,7 @@ function submitAndRedirect(event) {  // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU
     // KIỂM TRA XEM FORM CÓ GIÁ TRỊ INPUT CHƯA
     if (form.checkValidity()) {
         form.submit();
-        window.location.href = 'registerP2.html';
+        window.location.href = 'https://bach-xuan.github.io/SPCK/registerP2.html';
     } else { // HIỂN THỊ THÔNG BÁO XÁC THỰC CHO CÁC TRƯỜNG HỢP KHÔNG HỢP LỆ
         form.reportValidity();
     }
@@ -93,7 +93,7 @@ function submitAndRedirect(event) {  // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU
     if (form.checkValidity()) {
         form.submit();
         alert('ACCOUNT CREATED!'); // THÔNG BÁO ĐĂNG KÝ THÀNH CÔNG
-        window.location.href = 'login.html';
+        window.location.href = 'https://bach-xuan.github.io/SPCK/login.html';
     } else { // HIỂN THỊ THÔNG BÁO XÁC THỰC CHO CÁC TRƯỜNG HỢP KHÔNG HỢP LỆ
         form.reportValidity();
     }
@@ -109,7 +109,7 @@ function submitAndRedirect(event) {  // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU
     if (form.checkValidity()) {
         form.submit();
         alert('ARTICLE POSTED');
-        window.location.href = 'index.html';
+        window.location.href = 'https://bach-xuan.github.io/SPCK/index.html';
     } else { // HIỂN THỊ THÔNG BÁO XÁC THỰC CHO CÁC TRƯỜNG HỢP KHÔNG HỢP LỆ
         form.reportValidity();
     }

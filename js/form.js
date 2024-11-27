@@ -18,10 +18,24 @@ inputs.forEach((input, index) => {
     });
 });
 
-// HIỂN THỊ MẬT KHẨU
+// HIỂN THỊ MẬT KHẨU (LOGIN)
 function togglePasswordVisibility() {
-    const passwordInput = document.getElementById('input-password');
-    const toggleEye = document.getElementById('toggleEye');
+    const passwordInput = document.getElementById('input-password-login');
+    const toggleEye = document.getElementById('toggleEye-login');
+
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleEye.textContent = '-_-'; // KHÔNG HIỂN THỊ
+    } else {
+        passwordInput.type = 'password';
+        toggleEye.textContent = 'o-o'; // HIỂN THỊ
+    }
+}
+
+// HIỂN THỊ MẬT KHẨU (REGISTER)
+function togglePasswordVisibility() {
+    const passwordInput = document.getElementById('input-password-register');
+    const toggleEye = document.getElementById('toggleEye-register');
 
     if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
@@ -48,8 +62,8 @@ function submitAndRedirect(event) { // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU 
     }
 }
 
-// CHUYỂN ĐẾN CÁC ELEMENTS TIẾP THEO BẰNG CÁCH NHẤN PHÍM "Enter" (REGISTER)
-const inputs = document.querySelectorAll("#register input"); // CHỌN TẤT CẢ INPUT TRONG FORM
+// CHUYỂN ĐẾN CÁC ELEMENTS TIẾP THEO BẰNG CÁCH NHẤN PHÍM "Enter" (REGISTER P2)
+const inputs = document.querySelectorAll("#registerP2 input"); // CHỌN TẤT CẢ INPUT TRONG FORM
 
 inputs.forEach((input, index) => {
     input.addEventListener("keydown", (event) => {
@@ -62,7 +76,7 @@ inputs.forEach((input, index) => {
                 nextInput.focus();
             } else {
                 // CHUYỂN ĐẾN NÚT "CREATE!" NẾU KHÔNG CÒN INPUT
-                document.querySelector("#register #create-btn").focus();
+                document.querySelector("#registerP2 #create-btn").focus();
             }
         }
     });
@@ -77,7 +91,7 @@ function submitAndRedirect(event) {  // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU
     // KIỂM TRA XEM FORM CÓ GIÁ TRỊ INPUT CHƯA
     if (form.checkValidity()) {
         form.submit();
-        window.location.href = 'https://bach-xuan.github.io/SPCK/registerP2.html';
+        window.location.href = 'registerP2.html';
     } else { // HIỂN THỊ THÔNG BÁO XÁC THỰC CHO CÁC TRƯỜNG HỢP KHÔNG HỢP LỆ
         form.reportValidity();
     }
@@ -93,7 +107,7 @@ function submitAndRedirect(event) {  // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU
     if (form.checkValidity()) {
         form.submit();
         alert('ACCOUNT CREATED!'); // THÔNG BÁO ĐĂNG KÝ THÀNH CÔNG
-        window.location.href = 'https://bach-xuan.github.io/SPCK/login.html';
+        window.location.href = 'login.html';
     } else { // HIỂN THỊ THÔNG BÁO XÁC THỰC CHO CÁC TRƯỜNG HỢP KHÔNG HỢP LỆ
         form.reportValidity();
     }
@@ -109,7 +123,7 @@ function submitAndRedirect(event) {  // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU
     if (form.checkValidity()) {
         form.submit();
         alert('ARTICLE POSTED');
-        window.location.href = 'https://bach-xuan.github.io/SPCK/index.html';
+        window.location.href = 'index.html';
     } else { // HIỂN THỊ THÔNG BÁO XÁC THỰC CHO CÁC TRƯỜNG HỢP KHÔNG HỢP LỆ
         form.reportValidity();
     }

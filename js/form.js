@@ -72,7 +72,7 @@ inputs.forEach((input, index) => {
 function submitAndRedirect(event) {  // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU MẪU
     event.preventDefault();
 
-    const form = document.getElementById('register');
+    const form = document.getElementById('registerP1');
 
     // KIỂM TRA XEM FORM CÓ GIÁ TRỊ INPUT CHƯA
     if (form.checkValidity()) {
@@ -87,7 +87,7 @@ function submitAndRedirect(event) {  // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU
 function submitAndRedirect(event) {  // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU MẪU
     event.preventDefault();
 
-    const form = document.getElementById('register');
+    const form = document.getElementById('registerP2');
 
     // KIỂM TRA XEM FORM CÓ GIÁ TRỊ INPUT CHƯA
     if (form.checkValidity()) {

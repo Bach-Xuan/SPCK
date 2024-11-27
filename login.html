@@ -4,12 +4,15 @@
 <head>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="CSS/forms.css">
-  <link rel="stylesheet" href="CSS/navbrand.css">
-  <link rel="stylesheet" href="CSS/navbar.css">
-  <link rel="stylesheet" href="CSS/notification.css">
-  <link rel="stylesheet" href="CSS/backtotop.css">
-  <link rel="stylesheet" href="CSS/footer.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/navbrand.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/notification.css">
+  <link rel="stylesheet" href="css/backtotop.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <!-- JS -->
+  <link rel="stylesheet" href="js/form.js">
+  <link rel="stylesheet" href="js/backtotop.js">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
@@ -117,27 +120,6 @@
       <path
         d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
     </svg></button>
-  <script>
-
-    const backToTopButton = document.getElementById('backToTop');
-
-    // ĐIỀU KIỆN XUẤT HIỆN
-    window.onscroll = function () {
-      if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 300) {
-        backToTopButton.style.display = "block";
-      } else {
-        backToTopButton.style.display = "none";
-      }
-    };
-
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }
-
-  </script>
 
   <!-- CONTENT -->
   <div class="form-container">
@@ -164,59 +146,7 @@
       <button id="login-btn" type="submit" onclick="submitAndRedirect(event)" class="submit-button">I'M BACK!</button>
     </form>
   </div>
-  <script>
 
-    // CHUYỂN ĐẾN CÁC ELEMENTS TIẾP THEO BẰNG CÁCH NHẤN PHÍM "Enter"
-    const inputs = document.querySelectorAll("#login input"); // CHỌN TẤT CẢ INPUT TRONG FORM
-
-    inputs.forEach((input, index) => {
-      input.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-          event.preventDefault(); // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU MẪU
-
-          // CHUYỂN ĐẾN INPUT TIẾP THEO NẾU CÓ
-          const nextInput = inputs[index + 1];
-          if (nextInput) {
-            nextInput.focus();
-          } else {
-            // CHUYỂN ĐẾN NÚT "I'M BACK!" NẾU KHÔNG CÒN INPUT
-            document.querySelector("#login button").focus();
-          }
-        }
-      });
-    });
-
-    // HIỂN THỊ MẬT KHẨU
-    function togglePasswordVisibility() {
-      const passwordInput = document.getElementById('input-password');
-      const toggleEye = document.getElementById('toggleEye');
-
-      if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        toggleEye.textContent = '-_-'; // KHÔNG HIỂN THỊ
-      } else {
-        passwordInput.type = 'password';
-        toggleEye.textContent = 'o-o'; // HIỂN THỊ
-      }
-    }
-
-    // ĐẢM BẢO INPUT PHẢI CÓ GIÁ TRỊ TRƯỚC KHI SUBMIT
-    function submitAndRedirect(event) { // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU MẪU
-      event.preventDefault();
-
-      const form = document.getElementById('login');
-
-      // KIỂM TRA XEM FORM CÓ GIÁ TRỊ INPUT CHƯA
-      if (form.checkValidity()) {
-        form.submit();
-        alert('LOGIN SUCCESSFUL!'); // THÔNG BÁO ĐĂNG NHẬP THÀNH CÔNG
-        window.location.href = 'index.html';
-      } else { // HIỂN THỊ THÔNG BÁO XÁC THỰC CHO CÁC TRƯỜNG HỢP KHÔNG HỢP LỆ
-        form.reportValidity();
-      }
-    }
-
-  </script>
   <!-- ELEMENT ẢO NHẰM ĐẨY FOOTER XUỐNG CUỐI TRANG -->
   <main style="height: 350px;"></main>
 

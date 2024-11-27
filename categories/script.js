@@ -1,4 +1,3 @@
-// BACK TO TOP
 const backToTopButton = document.getElementById('backToTop');
 
 window.onscroll = function () { // ĐIỀU KIỆN XUẤT HIỆN

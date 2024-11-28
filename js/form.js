@@ -1,5 +1,5 @@
 // HIỂN THỊ MẬT KHẨU (LOGIN)
-function togglePasswordVisibility(#formm) {
+function togglePasswordVisibility() {
     const passwordInput = document.getElementById(`${form} input[type="password"]`);
     const toggleEye = document.getElementById(`${formId} span`);
 

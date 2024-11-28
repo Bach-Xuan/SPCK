@@ -15,7 +15,7 @@
     line-height: 30px;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: none !important;
+    display: none;
     z-index: 1000;
     transition: opacity 0.3s, transform 0.3s;
     display: flex;

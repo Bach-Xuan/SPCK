@@ -125,7 +125,7 @@
         <div class="form-group">
           <div class="form-floating">
             <input id="input-password-login" type="password" class="form-control" placeholder="Password" required>
-            <span id="toggleEye" class="toggleEye-login" onclick="togglePasswordVisibility()">o-o</span>
+            <span class="toggleEye" id="toggleEye-login" onclick="togglePasswordVisibility(this)">o-o</span>
             <label>Password</label>
           </div>
         </div>
@@ -134,7 +134,7 @@
             Don't have an account? <a href="registerP1.html">Create one now!</a>
           </p>
         </div>
-        <button id="login-btn" type="submit" onclick="submitAndRedirect(event)" class="submit-button">I'M BACK!</button>
+        <button id="login-btn" type="submit" onclick="submitAndRedirectLogin(event)" class="submit-button">I'M BACK!</button>
       </form>
     </div>
   </div>

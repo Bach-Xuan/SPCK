@@ -1,25 +1,35 @@
-// HIỂN THỊ MẬT KHẨU (LOGIN)
-function togglePasswordVisibility() {
-    const passwordInput = document.getElementById(`${form} input[type="password"]`);
-    const toggleEye = document.getElementById(`${formId} span`);
 
+// HIỂN THỊ MẬT KHẨU (LOGIN)
+function togglePasswordVisibility(passwordInputId, toggleEyeId) {
+    // Get the password input element by its ID
+    let passwordInput = document.getElementById(passwordInputId);
+    console.log(passwordInput);
+    // Get the toggle eye span element by its ID
+    let toggleEye = document.getElementById(toggleEyeId);
+
+    // Toggle the visibility of the password
     if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
-        toggleEye.textContent = '-_-'; // Không hiển thị
+        toggleEye.textContent = '-_-'; // Optionally change the icon/text to indicate password is visible
     } else {
         passwordInput.type = 'password';
-        toggleEye.textContent = 'o-o'; // Hiển thị
+        toggleEye.textContent = 'o-o'; // Optionally change the icon/text to indicate password is hidden
     }
 }
+
 // LOGIN
-document.getElementById('toggleEye-login').addEventListener('click', function () {
-    togglePasswordVisibility('input-password-login', 'toggleEye-login');
-});
+if (document.getElementById('toggleEye-login')) {
+    document.getElementById('toggleEye-login').addEventListener('click', function () {
+        togglePasswordVisibility('input-password-login', 'toggleEye-login');
+    });
+}
 
 // REGISTER
-document.getElementById('toggleEye-register').addEventListener('click', function () {
-    togglePasswordVisibility('input-password-register', 'toggleEye-register');
-});
+if (document.getElementById('toggleEye-register')) {
+    document.getElementById('toggleEye-register').addEventListener('click', function () {
+        togglePasswordVisibility('input-password-register', 'toggleEye-register');
+    });
+}
 
 
 // ĐẢM BẢO INPUT PHẢI CÓ GIÁ TRỊ TRƯỚC KHI SUBMIT (LOGIN)
@@ -197,5 +207,10 @@ var check = function () {
     }
 };
 
-document.getElementById("input-password-register").addEventListener("input", check);
-document.getElementById("confirm-password").addEventListener("input", check);
+if (document.getElementById("input-password-register")) {
+    document.getElementById("input-password-register").addEventListener("focus", check);
+}
+
+if (document.getElementById("confirm-password")) {
+    document.getElementById("confirm-password").addEventListener("focus", check);
+}

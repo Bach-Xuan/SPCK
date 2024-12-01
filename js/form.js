@@ -1,5 +1,4 @@
-
-// HIỂN THỊ MẬT KHẨU (LOGIN)
+// HIỂN THỊ MẬT KHẨU 
 function togglePasswordVisibility(passwordInputId, toggleEyeId) {
     // Get the password input element by its ID
     let passwordInput = document.getElementById(passwordInputId);
@@ -190,7 +189,7 @@ function submitAndRedirectPosting(event) {  // CHẶN VIỆC MẶC ĐỊNH GỬI
 // XEM XÉT SỰ TƯƠNG ĐỒNG KHI LẶP LẠI PASSWORD ĐỐI VỚI PASSWORD GỐC
 var check = function () {
     if ( // NẾU HAI INPUT CÓ GIÁ TRỊ BẰNG NHAU THÌ XUẤT THÔNG BÁO "MATCHED"
-        document.getElementById("input-password-register").value == document.getElementById("confirm-password").value && passwordInput !== ''
+        document.getElementById("input-password-register").value == document.getElementById("confirm-password").value && document.getElementById("input-password-register").value !== ''
     ) {
         document.getElementById("message").style.color = "#4a73e8";
         document.getElementById("message").innerHTML = "MATCHED";
@@ -199,7 +198,8 @@ var check = function () {
     ) {
         document.getElementById("message").innerHTML = " ";
     } else if ( // NẾU CẢ HAI INPUT CÓ GIÁ TRị BẰNG 0 THÌ KHÔNG CÓ HÀNH ĐỘNG
-        document.getElementById("input-password-register").value === '' && document.getElementById("confirm-password").value === '') {
+        document.getElementById("input-password-register").value === '' && document.getElementById("confirm-password").value === ''
+    ) {
         document.getElementById("message").innerHTML = " ";
     } else { // NẾU HAI GIÁ TRỊ INPUT KHÁC NHAU VÀ KHÁC 0 THÌ XUẤT THÔNG BÁO "NOT MATCHING"
         document.getElementById("message").style.color = "red";

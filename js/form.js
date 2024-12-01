@@ -1,5 +1,4 @@
-
-// HIỂN THỊ MẬT KHẨU (LOGIN)
+// HIỂN THỊ MẬT KHẨU 
 function togglePasswordVisibility(passwordInputId, toggleEyeId) {
     // Get the password input element by its ID
     let passwordInput = document.getElementById(passwordInputId);
@@ -47,98 +46,6 @@ function submitAndRedirectLogin(event) { // CHẶN VIỆC MẶC ĐỊNH GỬI BI
         form.reportValidity();
     }
 }
-
-// CHUYỂN ĐẾN CÁC ELEMENTS TIẾP THEO BẰNG CÁCH NHẤN PHÍM "Enter" (LOGIN)
-const loginInputs = document.querySelectorAll("#login input"); // CHỌN TẤT CẢ INPUT TRONG FORM
-
-loginInputs.forEach((input, index) => {
-    input.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-            event.preventDefault(); // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU MẪU
-
-            // CHUYỂN ĐẾN INPUT TIẾP THEO NẾU CÓ
-            function login(event) {
-                event.preventDefault();
-                const nextInput = inputs[index + 1];
-                if (nextInput) {
-                    nextInput.focus();
-                } else {
-                    // CHUYỂN ĐẾN NÚT "I'M BACK!" NẾU KHÔNG CÒN INPUT
-                    document.querySelector("#login button").focus();
-                }
-            }
-        }
-    });
-});
-
-// CHUYỂN ĐẾN CÁC ELEMENTS TIẾP THEO BẰNG CÁCH NHẤN PHÍM "Enter" (REGISTER P1)
-const registerP1Inputs = document.querySelectorAll("#registerP1 input"); // CHỌN TẤT CẢ INPUT TRONG FORM
-
-registerP1Inputs.forEach((input, index) => {
-    input.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-            event.preventDefault(); // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU MẪU
-
-            // CHUYỂN ĐẾN INPUT TIẾP THEO NẾU CÓ
-            function registerP1(event) {
-                event.preventDefault();
-                const nextInput = inputs[index + 1];
-                if (nextInput) {
-                    nextInput.focus();
-                } else {
-                    // CHUYỂN ĐẾN NÚT "SUBMIT!" NẾU KHÔNG CÒN INPUT
-                    document.querySelector("#posting button").focus();
-                }
-            }
-        }
-    });
-});
-
-// CHUYỂN ĐẾN CÁC ELEMENTS TIẾP THEO BẰNG CÁCH NHẤN PHÍM "Enter" (REGISTER P2)
-const registerP2Inputs = document.querySelectorAll("#registerP2 input"); // CHỌN TẤT CẢ INPUT TRONG FORM
-
-registerP2Inputs.forEach((input, index) => {
-    input.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-            event.preventDefault(); // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU MẪU
-
-            // CHUYỂN ĐẾN INPUT TIẾP THEO NẾU CÓ
-            function registerP2(event) {
-                event.preventDefault();
-                const nextInput = inputs[index + 1];
-                if (nextInput) {
-                    nextInput.focus();
-                } else {
-                    // CHUYỂN ĐẾN NÚT "CREATE!" NẾU KHÔNG CÒN INPUT
-                    document.querySelector("#registerP2 #create-btn").focus();
-                }
-            }
-        }
-    });
-});
-
-// CHUYỂN ĐẾN CÁC ELEMENTS TIẾP THEO BẰNG CÁCH NHẤN PHÍM "Enter" (POSTING)
-const postingInputs = document.querySelectorAll("#posting input"); // CHỌN TẤT CẢ INPUT TRONG FORM
-
-postingInputs.forEach((input, index) => {
-    input.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-            event.preventDefault(); // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU MẪU
-
-            // CHUYỂN ĐẾN INPUT TIẾP THEO NẾU CÓ
-            function posting(event) {
-                event.preventDefault();
-                const nextInput = inputs[index + 1];
-                if (nextInput) {
-                    nextInput.focus();
-                } else {
-                    // CHUYỂN ĐẾN NÚT "SUBMIT!" NẾU KHÔNG CÒN INPUT
-                    document.querySelector("#posting button").focus();
-                }
-            }
-        }
-    });
-});
 
 // ĐẢM BẢO INPUT PHẢI CÓ GIÁ TRỊ TRƯỚC KHI SUBMIT (REGISTER P1)
 function submitAndRedirectRegisterP1(event) {  // CHẶN VIỆC MẶC ĐỊNH GỬI BIỂU MẪU
@@ -190,7 +97,7 @@ function submitAndRedirectPosting(event) {  // CHẶN VIỆC MẶC ĐỊNH GỬI
 // XEM XÉT SỰ TƯƠNG ĐỒNG KHI LẶP LẠI PASSWORD ĐỐI VỚI PASSWORD GỐC
 var check = function () {
     if ( // NẾU HAI INPUT CÓ GIÁ TRỊ BẰNG NHAU THÌ XUẤT THÔNG BÁO "MATCHED"
-        document.getElementById("input-password-register").value == document.getElementById("confirm-password").value && passwordInput !== ''
+        document.getElementById("input-password-register").value == document.getElementById("confirm-password").value && document.getElementById("input-password-register").value !== ''
     ) {
         document.getElementById("message").style.color = "#4a73e8";
         document.getElementById("message").innerHTML = "MATCHED";
@@ -199,7 +106,8 @@ var check = function () {
     ) {
         document.getElementById("message").innerHTML = " ";
     } else if ( // NẾU CẢ HAI INPUT CÓ GIÁ TRị BẰNG 0 THÌ KHÔNG CÓ HÀNH ĐỘNG
-        document.getElementById("input-password-register").value === '' && document.getElementById("confirm-password").value === '') {
+        document.getElementById("input-password-register").value === '' && document.getElementById("confirm-password").value === ''
+    ) {
         document.getElementById("message").innerHTML = " ";
     } else { // NẾU HAI GIÁ TRỊ INPUT KHÁC NHAU VÀ KHÁC 0 THÌ XUẤT THÔNG BÁO "NOT MATCHING"
         document.getElementById("message").style.color = "red";
